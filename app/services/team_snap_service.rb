@@ -1,12 +1,9 @@
 class TeamSnapService
-
   attr_reader :conn
 
   def initialize
     @conn = Faraday.new(url: 'https://api.teamsnap.com/v3/')
   end
-
-# https://auth.teamsnap.com
 
   # def stores(zip)
   #   request = conn.get "stores(area(#{zip},25))", {
