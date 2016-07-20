@@ -15,6 +15,7 @@ gem 'faraday'
 gem 'oauth2'
 gem 'doorkeeper'
 gem 'bcrypt'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug'

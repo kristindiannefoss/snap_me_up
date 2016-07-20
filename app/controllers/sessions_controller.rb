@@ -1,15 +1,15 @@
-# require 'oauth2'
+require 'oauth2'
 
 class SessionsController < ApplicationController
-  # CLIENT = OAuth2::Client.new('x', 'y', :site => 'https://auth.teamsnap.com')
+  CLIENT = OAuth2::Client.new('x', 'y', :site => 'https://auth.teamsnap.com')
 
   def new
-    # redirect_to CLIENT.auth_code.authorize_url(:scope => 'read write', :redirect_uri => teamsnap_callback_url )
+    redirect_to CLIENT.auth_code.authorize_url(:scope => 'read write', :redirect_uri => teamsnap_callback_url )
   end
 
   def create
     # binding.pry
-    # token = CLIENT.auth_code.get_token(params['code'], :redirect_uri => teamsnap_callback_url)
+    token = CLIENT.auth_code.get_token(params['code'], :redirect_uri => teamsnap_callback_url)
     # binding.pry
 
 

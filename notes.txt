@@ -1,0 +1,23 @@
+√ user comes to my site 
+
+√ wants to log in
+
+√ your site sends them to team snap to authorize,
+  (when you send them to do the authorization you give a list of scopes(info types) you're asking for)
+   need to send the redirect uri and client id?
+
+√ login on teamsnap
+
+√ teamsnap authenticates
+
+sends the user back to the app via callback url,
+  includes a bunch of query parameters that I need to use
+  to identify user in the future (uid etc)
+  accessible in params hash later
+
+User's browser makes an http get request back to me
+
+gives me a special token to tell me that the person gave me
+  permission
+my app needs to find out who they are,
+tell teamsnap to do something on their behalf
