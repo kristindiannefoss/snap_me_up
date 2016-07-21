@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       last_name: env['omniauth.auth']['info']['last_name'],
       uid:  env['omniauth.auth']['uid'],
       urls: (env['omniauth.auth']['info']['urls']).to_json,
-      token: params["code"]
+      token: env["omniauth.auth"]["credentials"]["token"]
     )
       flash[:success] = "Welcome!"
       session[:user_id] = @user.id
