@@ -1,5 +1,5 @@
 PATH
-  remote: /Users/kfoss/omniauth_teamsnap
+  remote: /Users/kfoss/omniauth-teamsnap
   specs:
     omniauth-teamsnap (1.0.0)
       json (~> 1.3)

@@ -3,12 +3,14 @@ class SessionsController < ApplicationController
   end
 
   def create
+    binding.pry
     @user = User.find_or_create_by(
       email: env['omniauth.auth']['info']['email'],
       first_name: env['omniauth.auth']['info']['first_name'],
       last_name: env['omniauth.auth']['info']['last_name'],
       uid:  env['omniauth.auth']['uid'],
-      urls: (env['omniauth.auth']['info']['urls']).to_json
+      urls: (env['omniauth.auth']['info']['urls']).to_json,
+      token: params["code"]
     )
       flash[:success] = "Welcome!"
       session[:user_id] = @user.id
@@ -16,7 +18,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.delete(:user_id)
+    session.destroy
     redirect_to root_path
   end
 end

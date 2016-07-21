@@ -14,7 +14,7 @@ gem 'faraday'
 gem 'oauth2'
 gem 'bcrypt'
 gem 'omniauth'
-gem 'omniauth-teamsnap', path: '/Users/kfoss/omniauth_teamsnap'
+gem 'omniauth-teamsnap', path: '/Users/kfoss/omniauth-teamsnap'
 gem 'rest-client'
 
 
