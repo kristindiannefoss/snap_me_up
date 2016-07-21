@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.2.6'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -13,9 +12,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'figaro'
 gem 'faraday'
 gem 'oauth2'
-gem 'doorkeeper'
 gem 'bcrypt'
-gem 'devise'
+gem 'omniauth'
+gem 'omniauth-teamsnap', path: '/Users/kfoss/omniauth-teamsnap'
+gem 'rest-client'
+
 
 group :development, :test do
   gem 'byebug'

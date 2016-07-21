@@ -1,16 +1,14 @@
 Rails.application.routes.draw do
-
   root to: 'pages#index'
 
   resources :users
 
-  resources :sessions, only: [:new, :create]
-
-  get 'auth/teamsnap', as: 'teamsnap_login'
-  get '/auth/teamsnap/callback', to: 'sessions#create', as: 'teamsnap_callback'
-  post '/auth/teamsnap/callback', to: 'sessions#create'
+  get '/auth/team_snap', as: 'sign_in'
+  get '/auth/team_snap/callback', to: 'sessions#create'
+  post "/auth/team_snap/callback", to: "sessions#create"
 
   delete '/logout', to: 'sessions#destroy', as: :logout
 
+  get "/user/:id", to: "users#show", as: "dashboard"
 
 end
