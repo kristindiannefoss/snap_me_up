@@ -3,14 +3,9 @@ Rails.application.routes.draw do
 
   resources :users
 
-  # resources :sessions, only: [:create, :destroy]
   get '/auth/team_snap', as: 'sign_in'
   get '/auth/team_snap/callback', to: 'sessions#create'
   post "/auth/team_snap/callback", to: "sessions#create"
-
-  # get 'auth/teamsnap', as: 'teamsnap_login'
-  # get '/auth/team_snap/callback', to: 'sessions#create'
-  # post '/auth/team_snap/callback', to: 'sessions#create'
 
   delete '/logout', to: 'sessions#destroy', as: :logout
 
