@@ -9,8 +9,13 @@ class Team < OpenStruct
   end
 
   def self.teams_list(current_user)
-    teams(current_user).map do |team|
-      team["data"][14]["value"]
-    end
+      team_names = teams(current_user).map do |team|
+                      team["data"][14]["value"]
+                    end
+      team_ids   = teams(current_user).map do |team|
+                      team["data"][0]["value"]
+                    end
+      team_names.zip(team_ids)
   end
+
 end
