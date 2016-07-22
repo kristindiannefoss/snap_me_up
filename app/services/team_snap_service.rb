@@ -5,20 +5,22 @@ class TeamSnapService
     @conn = Faraday.new(url: 'https://api.teamsnap.com/v3/')
   end
 
-  def teams(current_user)
+  def get_teams(current_user)
     response = conn.get do |req|
                 req.url "teams/search?user_id=#{current_user.uid}"
                 req.headers['Authorization'] = "Bearer #{current_user.token}"
               end
-    parse(response)
+    parsed = parse(response)
+    parsed["collection"]["items"][0]["data"]
   end
 
-  def team_members(current_user, team_id)
-    response = conn.get do |req|
+  def get_team_members(current_user, team_id)
+    member_response = conn.get do |req|
                 req.url "members/search?team_id=#{team_id}"
                 req.headers['Authorization'] = "Bearer #{current_user.token}"
               end
-    parse(response)
+    parsed_member_info = parse(response)
+    parsed_member_info["collection"]["items"]
   end
 
   private
