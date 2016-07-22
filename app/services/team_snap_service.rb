@@ -19,7 +19,7 @@ class TeamSnapService
                 req.url "members/search?team_id=#{team_id}"
                 req.headers['Authorization'] = "Bearer #{current_user.token}"
               end
-    parsed_member_info = parse(response)
+    parsed_member_info = parse(member_response)
     parsed_member_info["collection"]["items"]
   end
 

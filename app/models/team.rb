@@ -18,4 +18,13 @@ class Team < OpenStruct
       team_names.zip(team_ids)
   end
 
+  def self.team_members(current_user, team_id)
+    team_members_array = service.get_team_members(current_user, team_id)
+    team_members_array.map { |team_member| Member.new(team_member)}
+  end
+
+  def self.roster_hashes(current_user, list)
+    list.map {|team| list[1] = team_members(current_user, team[1])}
+  end
+
 end
