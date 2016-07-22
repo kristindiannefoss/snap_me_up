@@ -1,6 +1,4 @@
-class Team < ActiveRecord::Base
-  belongs_to :user
-
+class Team < OpenStruct
   attr_reader :team_id,
               :team_name,
               :team_members
@@ -9,7 +7,7 @@ class Team < ActiveRecord::Base
     @service ||= TeamSnapService.new
   end
 
-  def service.team
+  def service.teams
     service.teams.map { |team| Team.new(team)}
   end
 
