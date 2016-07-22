@@ -11,7 +11,7 @@ class TeamSnapService
                 req.headers['Authorization'] = "Bearer #{current_user.token}"
               end
     parsed = parse(response)
-    parsed["collection"]["items"][0]["data"]
+    parsed["collection"]["items"]
   end
 
   def get_team_members(current_user, team_id)
