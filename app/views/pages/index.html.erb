@@ -7,7 +7,8 @@
 <% end %>
 
 <% @teams.each do |team| %>
-<p><%= team %></p>
+  <p>
+    <%#= link_to team, team_path(team) %>
+    <%= team.team_names(current_user) %>
+  </p>
 <% end %>
-
-<%= @team_members %>

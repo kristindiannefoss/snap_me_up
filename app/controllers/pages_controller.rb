@@ -1,6 +1,11 @@
 class PagesController < ApplicationController
   def index
-    @teams        = Team.teams_list(current_user)
-    @team_members = Team.roster_hashes(current_user, @teams)
+    # binding.pry
+    @teams = Team.teams_list(current_user) #[["Team Teamtastic", 1931903], ["CU Buffs", 1974307]]
+    # @members = Team.team_members(current_user, team)
+  end
+
+  def show
+    @team = Team.find(params[:id]) 
   end
 end

@@ -19,9 +19,19 @@ class TeamSnapService
                 req.url "members/search?team_id=#{team_id}"
                 req.headers['Authorization'] = "Bearer #{current_user.token}"
               end
+
     parsed_member_info = parse(member_response)
-    parsed_member_info["collection"]["items"]
+    collection = parsed_member_info["collection"]["items"]
+    member_array = collection.map do |member|
+          id = member["data"][0]["value"]
+          first_name = member["data"][8]["value"]
+          last_name = member["data"][30]["value"]
+          { id: id, first_name: first_name, last_name: last_name }
+    end
+    member_array
   end
+
+# {:id => member[i]["data"][0]["value"], :first_name => member[i]["data"][8]["value"], :last_name => member[i]["data"][30]["value"]}
 
   private
 
