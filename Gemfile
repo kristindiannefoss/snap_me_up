@@ -16,7 +16,7 @@ gem 'bcrypt'
 gem 'omniauth'
 gem 'omniauth-teamsnap', path: '/Users/kfoss/omniauth-teamsnap'
 gem 'rest-client'
-
+gem 'responders'
 
 group :development, :test do
   gem 'byebug'
