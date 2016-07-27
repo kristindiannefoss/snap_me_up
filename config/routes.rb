@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   root to: 'pages#index'
 
-  resources :users
-
   get '/auth/team_snap', as: 'sign_in'
   get '/auth/team_snap/callback', to: 'sessions#create'
   post "/auth/team_snap/callback", to: "sessions#create"
