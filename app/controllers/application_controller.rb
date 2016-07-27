@@ -1,6 +1,11 @@
+require "application_responder"
+
 require 'json'
 
 class ApplicationController < ActionController::Base
+  self.responder = ApplicationResponder
+  respond_to :html
+
   protect_from_forgery with: :exception
 
   helper_method :signed_in?
