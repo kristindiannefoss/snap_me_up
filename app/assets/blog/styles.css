@@ -53,7 +53,7 @@ body .demo-blog {
 }
 
 .demo-blog.mdl-layout .mdl-layout__content {
-  padding-top: 230px;
+  padding-top: 166px;
   position: relative;
   -webkit-overflow-scrolling: touch;
 }
@@ -243,8 +243,7 @@ body .demo-blog {
   border-top-right-radius: 2px;
 }
 .demo-blog .something-else .mdl-card__media img {
-  width: 64px;
-  height: 64px;
+  width: 103%;
   margin-bottom: 10px;
 }
 .demo-blog .something-else .mdl-card__supporting-text {
@@ -554,9 +553,9 @@ body .demo-blog {
 }
 
 .demo-blog .mdl-mini-footer {
-  margin-top: 80px;
+  /*margin-top: 80px;*/
   height: 120px;
-  padding: 40px;
+  padding: 20, 40;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
