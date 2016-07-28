@@ -10,8 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require teams.js
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require teams.js
 //= require_tree .
