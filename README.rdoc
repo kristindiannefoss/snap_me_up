@@ -1,28 +1,12 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is a project I started to explore an api for a company I was interested in, TeamSnap.  It was a format of api I was unfamiliar with, JSON collection and it took some poking before I was able to get what I wanted back.  I had only touched on Oauth in projects and had used the Omniauth Gem for authorizing through another web application.  I found the oauth process to be confusing and overly complicated and I wanted to see what was involved in creating a usable gem to authorize through TeamSnap.  The work-in-progress gem code is here: (https://github.com/kristindiannefoss/omniauth_teamsnap.git) if you would like to try to install it for this app.  You'll need to sign up for a [team snap account](https://go.teamsnap.com/signup/select_role?email=).
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Currently, I'm playing with materialize templates and components, (I've only used bootstrap or hand-rolled css/html in the past), so it's a bit of a cluster, but the project is based on exploring something you were interested in.  While digging through the user site I came across some features I would like to tweak for a different UI, so I have been working on building a prototype and I hope to have something deployed by Monday, August 1.  We shall see.
+
+
+You'll notice I haven't tested.  I normally do test and practice TDD, but time was limited and I've been exploring more than building a usable production ready app.  It's not a show piece and it's not special, but it could be!
+
+
+Comments are welcome, try not to judge me too harshly, code quality is not my main focus for this project, just exploration, and the unknown.
